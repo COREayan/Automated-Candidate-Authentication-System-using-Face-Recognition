@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %} Camera {% endblock title %}
+ 
+{% block body %}
+<link href="../static/cam_style.css" rel="stylesheet">
+<div class="camera container">
+    <div class="big_cont">
+        <div class="cont">
+            <div class="box1">
+                <form action="auth" method="POST" class="form1">  
+                    {% csrf_token %}
+                    <p id="std">STUDENT DETAILS :</p>
+                    <p class="pp">Name : <input type="text" name="name" id="name" disabled></p>
+                    <p class="pp">Roll No : <input type="text" name="user_id" id="user_id" disabled></p>
+                    <button id="proceed">Proceed</button>
+                </form>
+            </div>
+            <div class="box2">
+                <div id="can">
+                    <div class="cam">
+                        <video id="webcam" autoplay playsinlne></video>
+                        <form action="cp" method='post'>  
+                            {% csrf_token %}
+                             <button type="submit" id="snap" ><a >Snap</a></button>   
+                        </form>
+                    </div>
+                    <div class="cam">
+                        <canvas id="canvas"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    <script>
+        const webCamElement = document.getElementById("webcam");
+        const canvasElement = document.getElementById("canvas");
+        const webcam =new Webcam(webCamElement,"user",canvasElement);
+        webcam.start();
+        document.getElementById("snap").onclick = function() { myFunction() };
+        function myFunction() {
+            webcam.stop();
+        }
+    </script>
+</div>
+{% endblock body%}
+
+

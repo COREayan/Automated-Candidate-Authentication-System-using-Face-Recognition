@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title %} Retake {% endblock title %}
+{% load static %}
+{% block body %}
+<link href="../static/cam_style.css" rel="stylesheet">
+<div class="camera container">
+    <div class="big_cont">
+        <div class="cont">
+            <div class="box1">
+                <form action="auth" method="POST" class="form1">  
+                    {% csrf_token %}
+                <p id="std">STUDENT DETAILS :</p>
+                <p class="pp">Name : <input type="text" name="name" id="name" ></p>
+                <p class="pp">Roll No : <input type="text" name="user_id" id="user_id"></p>
+                <button id="proceed">Proceed</button>
+                </form>
+            </div>
+            <div class="box2">
+                <img src = {% static '/images/test.png' %} id='webcam' alt="Image load failed">
+                <form action="rt" method='post'>
+                    {% csrf_token %}
+                    <button id="Retake">Retake</button>
+                </form>
+               
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body%}

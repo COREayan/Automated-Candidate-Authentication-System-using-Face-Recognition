@@ -1,0 +1,150 @@
+
+body{  
+  font-family: Calibri, Helvetica, sans-serif;  
+  background: linear-gradient(to bottom right,#001a50 ,rgb(179, 255, 0)) ;
+  color: white;
+  } 
+  
+h1{
+  color: rgb(179, 255, 0);
+  font-size: 40px;
+}
+
+.container {  
+  padding: 50px; 
+  background-color: black; 
+  position: relative;
+  background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)), url(classroom-1637911784120-2122.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;  
+  background-attachment: fixed;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}  
+
+.register{
+  width: auto;
+  background-color: rgba(255, 255, 255,0.2);
+  border-radius: 15px;
+  box-shadow: 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+}
+
+td .l1{
+  padding-right: 50px;
+}
+
+/* #label{
+  display: inline-block;
+  padding: 0 0 0 12px;
+  font-weight: bold;
+  font-size: 17px;
+} */
+
+/* .col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+.column {
+  float: left;
+  width: fit-content;
+  padding: 10px 50px;
+  justify-content: space-between;
+ 
+}
+
+.row{
+  padding-left: 40px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+} */
+
+/* tr{
+  height: fit-content;
+  width: 100%;
+  justify-content: space-between;
+} */
+
+/* .phn{
+  float: left;
+} */
+
+
+/* input[type=text],input[type=tel], textarea{  
+  width: 80%;
+  padding: 15px;  
+  margin: 5px 0 22px 0;  
+  display: inline-block;  
+  border: none;  
+  border-radius: 5px;
+  background: #f1f1f1; 
+  resize: vertical; 
+}  
+
+input[type=text]:focus,input[type=tel]:focus,textarea:focus {  
+  background-color: rgb(209, 255, 101);  
+  outline: none;  
+}  */
+
+
+/* .inp{
+  width: 75px;
+}  */
+
+
+/* div {  
+  padding: 5px 0;  
+}  */
+
+
+hr {  
+  border: 1px solid #f1f1f1;  
+  margin-bottom: 25px;
+  width: 100%;  
+}  
+
+
+.registerbtn {  
+  background: linear-gradient(to bottom right,#001a50 5% ,rgb(179, 255, 0)) ;  
+  color: white;  
+  font-size: 20px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 16px 75px; 
+  text-align: center; 
+  margin: 20px 0;  
+  border: none; 
+  border-radius: 30px; 
+  cursor: pointer;  
+  width: 100%;  
+  /* opacity: 0.9;   */
+}  
+
+.registerbtn:hover {  
+  opacity: 1;  
+}  
+
+@media screen and (max-width: 600px) {
+  .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+} 

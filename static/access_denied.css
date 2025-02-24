@@ -1,0 +1,67 @@
+body{  
+    font-family: Calibri, Helvetica, sans-serif;  
+    background: linear-gradient(to bottom right,#001a50 ,rgb(179, 255, 0)) ;
+    color: white;
+    } 
+    
+  .p1{
+    color: rgb(19, 163, 176);
+    text-shadow:
+        0 0 12px rgb(3, 160, 162);
+    font-size: 50px;
+    margin: 10px;
+    letter-spacing: 10px;
+    font-weight: bold;
+    
+  }
+  
+  .p2{
+    color: rgb(25, 198, 25);
+    text-shadow:
+        0 0 21px rgb(0, 111, 4);
+        /* 0 0 42px rgb(56, 251, 82),
+        0 0 82px rgb(25, 251, 33); */
+    font-size: 80px;
+    margin: 10px;
+    letter-spacing: 10px;
+    font-weight: bold;
+    
+  }
+
+  .p3{
+      color: rgb(255, 39, 31);
+      text-shadow:
+        0 0 21px rgb(232, 8, 8);
+      font-size: 80px;
+      margin: 10px;
+      letter-spacing: 10px;
+      font-weight: bold;
+      
+  }
+
+  .container {  
+    padding: 250px 50px; 
+    background-color: black; 
+    position: relative;
+    background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)), url(classroom-1637911784120-2122.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;  
+    background-attachment: fixed;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }  
+
+  .access{
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 80px 0 90px;
+    background-color: rgba(0, 25, 40, 0.6);
+    border-style: solid;
+    border-width:2px;
+    border-color: rgb(47, 158, 255);
+  }

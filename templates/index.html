@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width-device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link href="../static/style1.css" rel="stylesheet">
+  
+
+ 
+    </head>
+      <body>
+        
+          <div class="container">
+            <div class="image-header">
+              <div class="div-logo">
+                  <img src="../static/logo.jpg" height="80px" width="100px">
+                  </div>
+                  <div class="image-nav">
+                  </div>
+          
+              <h1 class="quote">Automated Candidate Authentication System</h1>
+                </div>
+            <div class="row">
+              <div class="card-01">
+                 <div class="card-02">
+                   <h2 class="card-head">Administrator</h2>
+                  <form method="POST" class="form1">  
+                  {% csrf_token %}
+                    <div class="container1">   
+                        <div class="login">
+                          <label>Username : </label>
+                          <input type="text" placeholder="Enter Username" name="username" id="username" required>
+                        </div>  
+                        <div class="login">
+                          <label>Password : </label>
+                          <input type="password" placeholder="Enter Password" name="password" id="password" required>
+                        </div>  
+                        <button class="login-btn" type="submit">Login</button>   
+                    </div>   
+                  </form>   
+                </div>
+                  <div class="card-02">
+                    <p class="card-head">Authenticator</p>
+                    <form method="POST" class="form1">  
+                    {% csrf_token %}
+                      <div class="container1">   
+                          <div class="login">
+                            <label>Username : </label>
+                            <input type="text" placeholder="Enter Username" name="username" id="username" required>
+                          </div>  
+                          <div class="login">
+                            <label>Password : </label>
+                            <input type="password" placeholder="Enter Password" name="password" id="password" required>
+                          </div>  
+                          <button class="login-btn" type="submit">Login</button>     
+                      </div>   
+                    </form>
+                  </div>
+              </div>
+            </div>
+          </div>
+          
+  
+      </body>
+
+</html>
