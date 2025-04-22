@@ -56,7 +56,7 @@ ROOT_URLCONF = 'face_recognition.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR,'templates')],
+        'DIRS': [os.path.join(BASE_DIR,'web_interface', 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -123,8 +123,8 @@ STATIC_URL = '/static/'
 
 #Added manually
 STATICFILES_DIRS=(
-    os.path.join(BASE_DIR,'static'),
-    )
+    os.path.join(BASE_DIR, 'web_interface', 'static'),
+)
 
 
 # Base url to serve media files  
