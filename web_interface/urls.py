@@ -28,7 +28,7 @@ urlpatterns = [
     path('live-image/', views.live_image, name='live_image'),
     path('capture/', views.capture_image, name='capture_image'),
     path('retake/', views.retake_image, name='retake_image'),
-    path('image-request/', views.image_request, name='image_request'),
+    path('image_request/', views.image_request, name='image_request'),
 
     # Face authentication
     path('authenticate/', views.authenticate_user, name='authenticate_user'),
