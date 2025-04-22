@@ -15,11 +15,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.urls.conf import include
-from django.conf import settings  
-from django.conf.urls.static import static  
+from web_interface import views
+from .views import image_request  
+
+
+app_name = 'web_interface'
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include(('web_interface.urls'), namespace='web_interface'))  
-]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+    path('', views.index, name='index'),
+
+    # Image handling views
+    path('live-image/', views.live_image, name='live_image'),
+    path('capture/', views.capture_image, name='capture_image'),
+    path('retake/', views.retake_image, name='retake_image'),
+    path('image-request/', views.image_request, name='image_request'),
+
+    # Face authentication
+    path('authenticate/', views.authenticate_user, name='authenticate_user'),
+]
