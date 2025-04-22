@@ -1,76 +1,56 @@
-<!DOCTYPE html>  
-<html>  
-    <head>  
-        <meta charset="utf-8">
-        <meta name="viewport" content="width-device-width, initial-scale=1.0">    
-        <link href="../static/admin_style.css" rel="stylesheet"> 
-    <body>
-        
-        <div class="container">
-            
-                <h1><center> Candidate Registration Form</center></h1>
-                <hr>
-                <div class="register">
-                {% if submitted %}
-                    <center><h2>Your entry was submitted successfully</h2>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">  
+<head>  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link href="{% static 'admin_style.css' %}" rel="stylesheet">  
+    <title>Candidate Registration Form</title>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">Candidate Registration Form</h1>
+        <hr>
+        <div class="register">
+            {% if submitted %}
+                <div style="text-align: center;">
+                    <h2>Your entry was submitted successfully</h2>
                     <br>
-                    <a href='image_request' style='color:white; text-decoration:none;'>Fill Another Form</a>
+                    <a href="{% url 'image_request' %}" style="color: white; text-decoration: none;">Fill Another Form</a>
                     <br><br>
-                    <a href='admin/Home/student' style='color:white; text-decoration:none;'>See Candidate Database</a>
+                    <a href="{% url 'admin:Home_student' %}" style="color: white; text-decoration: none;">See Candidate Database</a>
                     <br><br>
-                    <a href='/' style='color:white; text-decoration:none;'>Return To Home Page</a>
-                    </center>
-                {% else %}
-                    <form action="" method=POST enctype="multipart/form-data">
-                        {% csrf_token %}
-                        
-                        <table>
-                            <tr class="abc">
-                                <td class='l1'>Firstname</td>
-                                <td id='firstname' class='form'>{{ form.firstname }}</td>
-                            </tr>
-                            <tr class="abc">
-                                <td class='l1'  style='padding-right: 200px;'>Middlename</td>
-                                <td id='middlename' class='form'>{{ form.middlename }}</td>
-                            </tr>
-                            <tr class="abc">
-                                <td class='l1'>Lastname</td>
-                                <td id='lastname' class='form'>{{ form.lastname }}</td>
-                            </tr>
-                            <tr class="abc">
-                                <td class='l1'>Roll No</td>
-                                <td id='rollno' class='form'>{{ form.rollno }}</td>
-                            </tr>
-                            <tr class="abc">
-                                <td class='l1'  style='padding-bottom: 20px;'>Course</td>
-                                <td id='course' class='form'  style='padding-bottom: 20px;'>{{ form.course }}</td>
-                            </tr>
-                            <tr class="abc">
-                                <td class='l1'style='padding-bottom: 20px;'>Gender</td>
-                                <td id='gender' class='form' style='padding-bottom: 20px;'>{{ form.gender }}</td>
-                            </tr>
-                            <tr class="abc">
-                                <td class='l1'>Phone No</td>
-                                <td id='phone' class='form'>{{ form.phone }}</td>
-                            </tr>
-                            <tr class="abc">
-                                <td class='l1'>Address</td>
-                                <td id='address' class='form'>{{ form.address }}</td>
-                            </tr>
-                            <tr class="abc">
-                                <td class='l1'>Email</td>
-                                <td id='email' class='form'>{{ form.email }}</td>
-                            </tr>
-                            <tr class="abc">
-                                <td class='l1'>Image (Format : rollno.png)</td>
-                                <td id='image' class='form'>{{ form.image }}</td>
-                            </tr>
-                        </table>
-                        <button type="submit" class="registerbtn" >Register</button>
-                    </form>
-                {% endif %}
-            
+                    <a href="{% url 'home' %}" style="color: white; text-decoration: none;">Return To Home Page</a>
+                </div>
+            {% else %}
+                <form method="POST" enctype="multipart/form-data" action="{% url 'image_request' %}">
+                    {% csrf_token %}
+                    <table>
+                        <tr class="abc">
+                            <td class="l1">Firstname</td>
+                            <td class="form">{{ form.firstname }}</td>
+                        </tr>
+                        <tr class="abc">
+                            <td class="l1" >Middlename</td>
+                            <td class="form">{{ form.middlename }}</td>
+                        </tr>
+                        <tr class="abc">
+                            <td class="l1">Lastname</td>
+                            <td class="form">{{ form.lastname }}</td>
+                        </tr>
+                        <tr class="abc">
+                            <td class="l1">Roll No</td>
+                            <td class="form">{{ form.rollno }}</td>
+                        </tr>
+                        <tr class="abc">
+                            <td class="l1">Image (Format : rollno.png)</td>
+                            <td class="form">{{ form.image }}</td>
+                        </tr>
+                    </table>
+                    <button type="submit" class="registerbtn">Register</button>
+                </form>
+            {% endif %}
         </div>
-        </div>
-    </body>
+    </div>
+</body>
 </html>

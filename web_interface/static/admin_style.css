@@ -1,150 +1,107 @@
-
-body{  
+/* Basic body styling */
+body {  
   font-family: Calibri, Helvetica, sans-serif;  
-  background: linear-gradient(to bottom right,#001a50 ,rgb(179, 255, 0)) ;
+  background: linear-gradient(to bottom right, #001a50, rgb(179, 255, 0));
   color: white;
-  } 
-  
-h1{
-  color: rgb(179, 255, 0);
-  font-size: 40px;
+  margin: 0;
+  padding: 0;
 }
 
+/* Headings */
+h1 {
+  color: rgb(179, 255, 0);
+  font-size: 40px;
+  text-align: center; /* center headings for better alignment */
+  margin-bottom: 20px;
+}
+
+/* Container styles */
 .container {  
-  padding: 50px; 
+  max-width: 1200px;     /* larger max width */
+  width: 95%;            /* almost full width */
+  margin: 40px auto;     /* centered with vertical space */
+  padding: 50px 20px;    /* padding left-right smaller to use more space */
+
   background-color: black; 
   position: relative;
-  background-image: linear-gradient(rgba(0,0,0,0.9),rgba(0,0,0,0.9)), url(classroom-1637911784120-2122.jpg);
+
+  background-image: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.9)), url(classroom-1637911784120-2122.jpg);
   background-size: cover;
   background-repeat: no-repeat;  
   background-attachment: fixed;
-  width: auto;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  
-}  
 
-.register{
-  width: auto;
-  background-color: rgba(255, 255, 255,0.2);
+  box-sizing: border-box; 
+  border-radius: 10px;    
+  border: 2px solid rgb(179, 255, 0);
+}
+
+/* Register form container */
+.register {
+  width: 100%; /* fill container width */
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 15px;
-  box-shadow: 0 0 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 30px 20px;
+  box-sizing: border-box;
 }
 
-td .l1{
-  padding-right: 50px;
+/* Table styling for the form */
+table {
+  width: 100%; /* full width inside register */
+  border-collapse: separate;
+  border-spacing: 0 15px; /* vertical spacing between rows */
 }
 
-/* #label{
-  display: inline-block;
-  padding: 0 0 0 12px;
+tr.abc td:first-child {
+  padding-right: 30px;
   font-weight: bold;
-  font-size: 17px;
-} */
-
-/* .col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
+  white-space: nowrap; /* prevent label wrapping */
 }
 
-.col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
-}
-
-.column {
-  float: left;
-  width: fit-content;
-  padding: 10px 50px;
-  justify-content: space-between;
- 
-}
-
-.row{
-  padding-left: 40px;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-} */
-
-/* tr{
-  height: fit-content;
+td.form {
   width: 100%;
-  justify-content: space-between;
-} */
+}
 
-/* .phn{
-  float: left;
-} */
-
-
-/* input[type=text],input[type=tel], textarea{  
-  width: 80%;
-  padding: 15px;  
-  margin: 5px 0 22px 0;  
-  display: inline-block;  
-  border: none;  
-  border-radius: 5px;
-  background: #f1f1f1; 
-  resize: vertical; 
-}  
-
-input[type=text]:focus,input[type=tel]:focus,textarea:focus {  
-  background-color: rgb(209, 255, 101);  
-  outline: none;  
-}  */
-
-
-/* .inp{
-  width: 75px;
-}  */
-
-
-/* div {  
-  padding: 5px 0;  
-}  */
-
-
-hr {  
-  border: 1px solid #f1f1f1;  
-  margin-bottom: 25px;
-  width: 100%;  
-}  
-
-
+/* Button styling */
 .registerbtn {  
-  background: linear-gradient(to bottom right,#001a50 5% ,rgb(179, 255, 0)) ;  
+  background: linear-gradient(to bottom right, #001a50 5%, rgb(179, 255, 0));  
   color: white;  
   font-size: 20px;
   font-weight: bold;
-  display: inline-block;
-  padding: 16px 75px; 
-  text-align: center; 
-  margin: 20px 0;  
+  padding: 16px 0; 
+  margin: 20px 0 0;
   border: none; 
   border-radius: 30px; 
   cursor: pointer;  
   width: 100%;  
-  /* opacity: 0.9;   */
-}  
+  transition: opacity 0.3s ease;
+}
 
 .registerbtn:hover {  
-  opacity: 1;  
-}  
+  opacity: 0.9;  
+}
 
+/* Responsive for small screens */
 @media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
+  .container {
+    width: 95%;
+    padding: 20px;
   }
-} 
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .registerbtn {
+    font-size: 18px;
+    padding: 12px 0;
+  }
+}

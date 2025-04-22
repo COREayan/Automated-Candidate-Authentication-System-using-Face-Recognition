@@ -6,7 +6,7 @@ from django import forms
   
 
 
-gender_choices= [
+'''gender_choices= [
     ('NA', 'Select any one'),
     ('Male', 'Male'),
     ('Female', 'Female'),
@@ -21,17 +21,16 @@ course_choices= [
     ('M.Tech', 'M.Tech'),
     ('MCA','MCA'),
     ('MBA','MBA'),
-    ]
+    ]'''
   
-class UserImageForm(forms.ModelForm):  
+class StudentSignupForm(forms.ModelForm):  
     class Meta:  
         # To specify the model to be used to create form  
         model = Student  
         # It includes all the fields of model  
-        fields = ('firstname', 'middlename', 'lastname', 'rollno', 'course', 'gender', 'phone', 'address', 'email', 'image')
+        fields = ('firstname', 'middlename', 'lastname', 'rollno', 'image')
 
         labels = {
-            
         }
 
         widgets = {
@@ -39,10 +38,4 @@ class UserImageForm(forms.ModelForm):
             'middlename' : forms.TextInput(attrs= {'class': 'inp', 'id': 'middlename', 'placeholder':'Enter Middlename'}),
             'lastname' : forms.TextInput(attrs= {'class': 'inp', 'id': 'lastname', 'placeholder':'Enter Lastname'}),
             'rollno' : forms.TextInput(attrs= {'class': 'inp', 'id': 'rollno', 'placeholder':'Enter Roll Number'}),
-            'course' : forms.Select(choices=course_choices),
-            'gender' : forms.Select(choices=gender_choices),
-            'phone' : forms.TextInput(attrs= {'class': 'inp', 'id': 'phone', 'placeholder':'Enter Phone Number'}),
-            'address' : forms.Textarea(attrs= {'class': 'inp', 'id': 'address', 'placeholder':'Enter Address'}),
-            'email' : forms.TextInput(attrs= {'class': 'inp', 'id': 'email', 'placeholder':'Enter Email Id'}),
-            
         }

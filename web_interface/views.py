@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.contrib import messages
 
 from web_interface.models import Student
-from web_interface.forms import UserImageForm
+from web_interface.forms import StudentSignupForm
 
 import cv2
 import face_recognition
@@ -68,12 +68,12 @@ def image_request(request):
     submitted = request.GET.get('submitted', False)
 
     if request.method == "POST":
-        form = UserImageForm(request.POST, request.FILES)
+        form = StudentSignupForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             return HttpResponseRedirect('/image_request?submitted=True')
     else:
-        form = UserImageForm()
+        form = StudentSignupForm()
 
     return render(request, 'image_form.html', {'form': form, 'submitted': submitted})
 
