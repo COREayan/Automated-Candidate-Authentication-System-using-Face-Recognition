@@ -28,10 +28,11 @@ A Django-based web application that enables secure and automated candidate regis
 
 ### 1️⃣ Clone the Repo
 
-```bash
+bash
 git clone https://github.com/COREayan/Automated-Candidate-Authentication-System-using-Face-Recognition.git
-cd Automated-Candidate-Authentication-System-using-Face-Recognition```
+cd Automated-Candidate-Authentication-System-using-Face-Recognition
 ---
+<code>```python # This is a Python code block def greet(name): return f"Hello, {name}!" ```</code>
 
 ###2️⃣ Create and Activate Virtual Environment
 python -m venv venv
