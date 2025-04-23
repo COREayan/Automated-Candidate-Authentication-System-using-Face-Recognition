@@ -33,7 +33,7 @@ git clone https://github.com/COREayan/Automated-Candidate-Authentication-System-
 cd Automated-Candidate-Authentication-System-using-Face-Recognition```
 ---
 
-2️⃣ Create and Activate Virtual Environment
+###2️⃣ Create and Activate Virtual Environment
 python -m venv venv
 source venv/bin/activate  # For Linux/macOS
 venv\Scripts\activate     # For Windows
