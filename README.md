@@ -1,5 +1,4 @@
 # 🧠 Automated Candidate Authentication System using Face Recognition
-
 A Django-based web application that enables secure and automated candidate registration and authentication using face recognition. This project aims to streamline the identity verification process for exams, interviews, or any environment requiring controlled access.
 
 ---
@@ -27,19 +26,13 @@ A Django-based web application that enables secure and automated candidate regis
 ## 🚀 Getting Started
 
 ### 1️⃣ Clone the Repo
-<pre lang="bash"> <code>git clone https://github.com/COREayan/Automated-Candidate-Authentication-System-using-Face-Recognition.git
-cd Automated-Candidate-Authentication-System-using-Face-Recognition</code> </pre>
-
-bash
-git clone https://github.com/COREayan/Automated-Candidate-Authentication-System-using-Face-Recognition.git
-cd Automated-Candidate-Authentication-System-using-Face-Recognition
----
-<code>```python # This is a Python code block def greet(name): return f"Hello, {name}!" ```</code>
+<pre lang="bash"><code>git clone https://github.com/COREayan/Automated-Candidate-Authentication-System-using-Face-Recognition.git
+cd Automated-Candidate-Authentication-System-using-Face-Recognition</code></pre>
 
 ###2️⃣ Create and Activate Virtual Environment
-python -m venv venv
+<pre lang="bash"><code>python -m venv venv
 source venv/bin/activate  # For Linux/macOS
-venv\Scripts\activate     # For Windows
+venv\Scripts\activate     # For Windows</code></pre>
 
 3️⃣ Install Dependencies
 pip install -r requirements.txt
