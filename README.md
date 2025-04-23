@@ -35,21 +35,21 @@ source venv/bin/activate  # For Linux/macOS
 venv\Scripts\activate     # For Windows</code></pre>
 
 3️⃣ Install Dependencies
-pip install -r requirements.txt
+<pre lang="bash"><code>pip install -r requirements.txt</code></pre>
 
 4️⃣ Apply Migrations
-python manage.py makemigrations
-python manage.py migrate
+<pre lang="bash"><code>python manage.py makemigrations
+python manage.py migrate</code></pre>
 
 5️⃣ Run the Server
-python manage.py runserver
+<pre lang="bash"><code>python manage.py runserver</code></pre>
 
 Visit http://127.0.0.1:8000/ to get started!
 
 📷 Face Recognition Setup
 The system uses the face_recognition library to encode and compare faces. Make sure your webcam is connected. You may need to install additional system packages for dlib.
 
-pip install face_recognition opencv-python
+<pre lang="bash"><code>pip install face_recognition opencv-python</code></pre>
 
 ✅ Usage
 Go to /image-request/ to register a candidate.
