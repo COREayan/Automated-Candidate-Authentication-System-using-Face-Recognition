@@ -49,7 +49,12 @@ Visit http://127.0.0.1:8000/ to get started!
 ![image](https://github.com/user-attachments/assets/7a218c0b-b49c-4ffc-a623-e82360251537) 
 
 if logged in as admin
-![image](https://github.com/user-attachments/assets/bf4cd40e-385b-4508-8166-68c035c893b3)
+![image](https://github.com/user-attachments/assets/bf4cd40e-385b-4508-8166-68c035c893b3) 
+
+after successfully filling the form 
+![image](https://github.com/user-attachments/assets/effa67fd-5d14-4b12-9c50-9c66a76686f6)
+
+
 
 if logged in as authenticator 
 ![image](https://github.com/user-attachments/assets/b16ad00f-0754-4ae0-a24e-6d1a94d688ea)
