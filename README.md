@@ -46,6 +46,8 @@ python manage.py migrate</code></pre>
 
 Visit http://127.0.0.1:8000/ to get started!
 
+![image](https://github.com/user-attachments/assets/7a218c0b-b49c-4ffc-a623-e82360251537)
+
 📷 Face Recognition Setup
 The system uses the face_recognition library to encode and compare faces. Make sure your webcam is connected. You may need to install additional system packages for dlib.
 
