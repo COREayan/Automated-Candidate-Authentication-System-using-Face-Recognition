@@ -63,4 +63,4 @@ Ayanabha Pramanik
 
 📍 From West Bengal, India
 🔗 LinkedIn
-📧 ayanabha@example.com
+📧 ayanabha.pramanik.ee@gmail.com
