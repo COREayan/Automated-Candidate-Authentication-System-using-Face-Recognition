@@ -29,19 +29,19 @@ A Django-based web application that enables secure and automated candidate regis
 <pre lang="bash"><code>git clone https://github.com/COREayan/Automated-Candidate-Authentication-System-using-Face-Recognition.git
 cd Automated-Candidate-Authentication-System-using-Face-Recognition</code></pre>
 
-###2️⃣ Create and Activate Virtual Environment
+### 2️⃣ Create and Activate Virtual Environment
 <pre lang="bash"><code>python -m venv venv
 source venv/bin/activate  # For Linux/macOS
 venv\Scripts\activate     # For Windows</code></pre>
 
-3️⃣ Install Dependencies
+### 3️⃣ Install Dependencies
 <pre lang="bash"><code>pip install -r requirements.txt</code></pre>
 
-4️⃣ Apply Migrations
+### 4️⃣ Apply Migrations
 <pre lang="bash"><code>python manage.py makemigrations
 python manage.py migrate</code></pre>
 
-5️⃣ Run the Server
+### 5️⃣ Run the Server
 <pre lang="bash"><code>python manage.py runserver</code></pre>
 
 Visit http://127.0.0.1:8000/ to get started!
