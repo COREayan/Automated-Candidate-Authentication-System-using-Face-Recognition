@@ -128,7 +128,7 @@ STATICFILES_DIRS=(
 
 
 # Base url to serve media files  
-MEDIA_URL = '/media/'  
+MEDIA_URL = '/web_interface/media/'  
   
 # Path where media is stored  
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')  
