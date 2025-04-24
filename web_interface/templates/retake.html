@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block title %} Retake {% endblock title %}
 {% load static %}
+
 {% block body %}
 <link href="../static/cam_style.css" rel="stylesheet">
 <div class="camera container">
@@ -16,8 +17,8 @@
                 </form>
             </div>
             <div class="box2">
-                <img src = {% static '/images/test.png' %} id='webcam' alt="Image load failed">
-                <form action="rt" method='post'>
+                <img src = "{% static 'live_images/test.png' %}" id='webcam' alt="Image load failed">
+                <form action="retake_image" method='post'>
                     {% csrf_token %}
                     <button id="Retake">Retake</button>
                 </form>

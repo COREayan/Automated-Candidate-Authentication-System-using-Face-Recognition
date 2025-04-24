@@ -1,6 +1,7 @@
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.contrib import messages
+from django.conf import settings
 
 from web_interface.models import Student
 from web_interface.forms import StudentSignupForm
@@ -8,6 +9,7 @@ from web_interface.forms import StudentSignupForm
 import cv2
 import face_recognition
 import numpy as np
+import os
 
 
 def index(request):
@@ -40,19 +42,25 @@ def capture_image(request):
     Capture a single image from the webcam and save to static folder.
     """
     cam = cv2.VideoCapture(0)
-    ret, frame = cam.read()
+    if not cam.isOpened():
+        return render(request, 'error.html', {'message': 'Camera could not be opened.'})
 
+    ret, frame = cam.read()
     if not ret:
         cam.release()
         return render(request, 'error.html', {'message': 'Failed to capture image from camera.'})
 
-    img_path = "static/images/test.png"
+    img_dir = os.path.join(settings.BASE_DIR, 'web_interface', 'static', 'live_images')
+    os.makedirs(img_dir, exist_ok=True)
+
+    img_path = os.path.join(img_dir, 'test.png')
     cv2.imwrite(img_path, frame)
+
     cam.release()
     cv2.destroyAllWindows()
-    #cam.release()
 
     return render(request, 'retake.html')
+
 
 def retake_image(request):
     """
