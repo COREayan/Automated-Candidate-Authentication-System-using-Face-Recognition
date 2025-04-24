@@ -70,8 +70,14 @@ def image_request(request):
     if request.method == "POST":
         form = StudentSignupForm(request.POST, request.FILES)
         if form.is_valid():
+            print('form is saving')
             form.save()
+            print('Form is valid - saving and redirecting')
             return HttpResponseRedirect('/image_request?submitted=True')
+        else:
+            print('Form is not valid')
+            print(form.errors)
+        
     else:
         form = StudentSignupForm()
 

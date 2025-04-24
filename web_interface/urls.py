@@ -18,6 +18,8 @@ from django.urls import path
 from web_interface import views
 from .views import image_request  
 
+from django.conf import settings
+from django.conf.urls.static import static
 
 app_name = 'web_interface'
 
@@ -32,4 +34,9 @@ urlpatterns = [
 
     # Face authentication
     path('authenticate/', views.authenticate_user, name='authenticate_user'),
+
+    path('admin/', admin.site.urls),
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
