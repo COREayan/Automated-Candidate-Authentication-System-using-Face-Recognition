@@ -52,7 +52,8 @@ if logged in as admin
 ![image](https://github.com/user-attachments/assets/bf4cd40e-385b-4508-8166-68c035c893b3) 
 
 after successfully filling the form 
-![image](https://github.com/user-attachments/assets/551d749c-8de9-4d5b-9bfb-7f0d337c8eac)
+![image](https://github.com/user-attachments/assets/effa67fd-5d14-4b12-9c50-9c66a76686f6)
+
 
 
 if logged in as authenticator 
