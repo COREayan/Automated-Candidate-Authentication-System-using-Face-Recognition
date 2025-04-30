@@ -100,13 +100,15 @@ def authenticate_user(request):
         user_id = request.POST.get('user_id')
         try:
             # Load and encode real-time image
-            img_live = face_recognition.load_image_file('static/images/test.png')
+            img_live = face_recognition.load_image_file('web_interface/static/live_images/test.png')
+            #print("img_live accepted")
             img_live_rgb = cv2.cvtColor(img_live, cv2.COLOR_BGR2RGB)
             encode_live = face_recognition.face_encodings(img_live_rgb)[0]
 
             # Load and encode stored image
-            img_stored_path = f'media/images/{user_id}.png'
+            img_stored_path = f'web_interface/media/student_images/{user_id}.png'
             img_stored = face_recognition.load_image_file(img_stored_path)
+            #print("img_stored_path accepted")
             img_stored_rgb = cv2.cvtColor(img_stored, cv2.COLOR_BGR2RGB)
             encode_stored = face_recognition.face_encodings(img_stored_rgb)[0]
 

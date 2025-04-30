@@ -8,7 +8,7 @@
     <div class="big_cont">
         <div class="cont">
             <div class="box1">
-                <form action="auth" method="POST" class="form1">  
+                <form action="/authenticate/" method="POST" class="form1">  
                     {% csrf_token %}
                 <p id="std">STUDENT DETAILS :</p>
                 <p class="pp">Name : <input type="text" name="name" id="name" ></p>
@@ -18,7 +18,7 @@
             </div>
             <div class="box2">
                 <img src = "{% static 'live_images/test.png' %}" id='webcam' alt="Image load failed">
-                <form action="retake_image" method='post'>
+                <form action="retake/" method='post'>
                     {% csrf_token %}
                     <button id="Retake">Retake</button>
                 </form>

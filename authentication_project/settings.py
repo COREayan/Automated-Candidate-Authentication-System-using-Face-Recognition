@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'face_recognition.urls'
+ROOT_URLCONF = 'authentication_project.urls'
 
 TEMPLATES = [
     {
@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'face_recognition.wsgi.application'
+WSGI_APPLICATION = 'authentication_project.wsgi.application'
 
 
 # Database
